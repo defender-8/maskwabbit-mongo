@@ -1,0 +1,13 @@
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.ticker {
+  background-color: $primary;
+
+  .ticker__element {
+    color: $white;
+    font-size: 22px;
+    line-height: 2.4;
+  }
+}

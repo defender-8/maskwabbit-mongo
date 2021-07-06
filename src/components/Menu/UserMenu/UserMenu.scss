@@ -1,0 +1,50 @@
+@import "../../../assets/scss/fonts";
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+
+.ant-menu.UserMenu {
+
+  &.UserMenu-volume {
+    @include shadowOut;
+    border: none;
+
+    .ant-menu-item {
+      a {
+        &:hover {
+          color: $secondary;
+        }
+      }
+
+      &.ant-menu-item-selected {
+        a {
+          color: $secondary;
+        }
+      }
+    }
+  }
+
+  &.UserMenu-flat {
+    border: none;
+    background-color: $bg-light;
+
+    .ant-menu-item {
+      font-size: 16px;
+      height: 48px;
+      line-height: 48px;
+
+      .anticon {
+        font-size: 16px;
+      }
+
+      a {
+        &:focus {
+          color: $primary;
+        }
+      }
+
+      &.ant-menu-item-selected {
+        background-color: darken($bg-light, 5%);
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.ant-menu {
+  .ant-menu-item {
+    &:active {
+      background: transparent;
+    }
+  }
+}
+
+.ant-menu-submenu {
+  .ant-menu {
+    &.ant-menu-sub {
+      .ant-menu-item {
+        &.ant-menu-item-selected {
+          background-color: $primary;
+
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// custom to redefine
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: transparent;
+}
+
+.ant-menu-horizontal > .ant-menu-item, .ant-menu-horizontal > .ant-menu-item:hover,
+.ant-menu-horizontal > .ant-menu-submenu, .ant-menu-horizontal > .ant-menu-submenu:hover,
+.ant-menu-horizontal > .ant-menu-item-active, .ant-menu-horizontal > .ant-menu-submenu-active,
+.ant-menu-horizontal > .ant-menu-item-open, .ant-menu-horizontal > .ant-menu-submenu-open,
+.ant-menu-horizontal > .ant-menu-item-selected, .ant-menu-horizontal > .ant-menu-submenu-selected {
+  border-bottom: none !important;
+}
+

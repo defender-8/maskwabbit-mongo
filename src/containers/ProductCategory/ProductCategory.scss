@@ -1,0 +1,25 @@
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.ProductCategory {
+
+  .PageContent {
+    margin-top: 88px;
+
+    .container {
+      max-width: 1152px;
+      @media (max-width: 1199px) {
+        max-width: 736px;
+      }
+
+      @media (max-width: 767px) {
+        max-width: 372px;
+      }
+    }
+  }
+
+  .ant-list-pagination {
+    margin-bottom: 64px;
+  }
+}

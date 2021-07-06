@@ -1,0 +1,107 @@
+@import "../../../assets/scss/fonts";
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+
+.Home {
+  .ant-layout-header {
+    height: 460px;
+    background: url("../../../assets/img/wave-header.svg") no-repeat center bottom;
+    background-size: 1920px;
+    @media (max-width: 991px) {
+      background-position: 10% bottom;
+      margin-bottom: 48px;
+    }
+    @media (max-width: 575px) {
+      background-position: 20% bottom;
+    }
+
+    .container {
+      max-width: 1260px;
+    }
+
+    .Logo {
+      transform: translateY(24px);
+      @media (min-width: 1200px) {
+        width: 39%;
+      }
+      @media (max-width: 1199px) {
+        width: 45%;
+      }
+      @media (max-width: 991px) {
+        width: 340px;
+        margin: 0 auto 24px;
+      }
+      @media (max-width: 360px) {
+        width: 100%;
+      }
+    }
+
+    .Slogan {
+      border: 7px solid $primary;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      position: absolute;
+      right: 64px;
+      bottom: -240px;
+      background-color: $white;
+      @media (max-width: 991px) {
+        @include posCenterX;
+        width: 240px;
+        height: 240px;
+      }
+
+      .Slogan-img {
+        width: 80%;
+        @include posCenter;
+      }
+    }
+  }
+
+  .section {
+    &.s-product-categories {
+      padding-top: 32px;
+
+      &.container {
+        @media (max-width: 1199px) {
+          max-width: 736px;
+        }
+
+        @media (max-width: 767px) {
+          max-width: 372px;
+        }
+      }
+    }
+
+    &.s-about {
+      .TextImageRow {
+        .TextImageRow-img {
+          @media (max-width: 767px) {
+            max-width: 260px;
+            @include mAuto;
+          }
+        }
+      }
+    }
+
+    &.s-featured-product {
+      .TextImageRow {
+        .TextImageRow-img {
+          max-width: 456px;
+          @include mAuto;
+        }
+      }
+    }
+
+    &.s-stay-home {
+      .TextImageRow {
+        .TextImageRow-img {
+          @media (max-width: 767px) {
+            max-width: 200px;
+            @include mAuto;
+          }
+        }
+      }
+    }
+  }
+}

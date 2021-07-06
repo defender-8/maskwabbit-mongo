@@ -1,0 +1,32 @@
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.CallToAction {
+  .CallToAction-subtitle {
+    color: $black;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .CallToAction-title {
+    font-family: LeviBrusf;
+    font-size: 56px;
+    color: $primary;
+  }
+
+  .CallToAction-img {
+    @include imgResponsive;
+  }
+
+  .CallToAction-text {
+    font-size: 24px;
+    color: $primary;
+  }
+
+  .CallToAction-action {
+    margin-top: 32px;
+  }
+}

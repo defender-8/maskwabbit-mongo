@@ -1,0 +1,145 @@
+@import "../../../assets/scss/fonts";
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+
+.ant-layout {
+  background-color: transparent !important;
+
+  .container {
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 16px;
+    padding-left: 16px;
+
+    &.container-medium {
+      max-width: 1156px;
+    }
+  }
+
+  .ant-layout-header {
+    padding: 0;
+    background: transparent;
+
+    .user-container {
+      position: absolute;
+      right: 120px;
+      top: 2px;
+      z-index: 10;
+      @media (max-width: 1199px) {
+        right: 24px;
+        top: 48px;
+      }
+      @media (max-width: 991px) {
+        top: 12px;
+        right: 32px;
+      }
+    }
+  }
+
+  .ant-layout-content {
+    min-height: 800px;
+  }
+
+  .ant-layout-footer {
+    background: url("../../../assets/img/wave-footer.svg") no-repeat center top;
+    background-size: 1920px;
+    padding-top: 260px;
+
+    .container {
+      max-width: 1156px;
+    }
+
+    .main-footer-copyright {
+      font-size: 16px;
+      font-family: LeviBrusf, cursive;
+      text-align: center;
+      color: $primary;
+      margin-top: 32px;
+    }
+
+    .main-footer-img {
+      @media (max-width: 991px) {
+        margin-top: 16px;
+      }
+    }
+
+    .button-wrapper {
+      @media (max-width: 1199px) {
+        max-width: 360px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+
+      @media (max-width: 991px) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .ant-btn {
+        @media (min-width: 1200px) {
+          width: 248px;
+        }
+      }
+    }
+
+    .phone-number {
+      display: inline-block;
+      font-size: 24px;
+      font-weight: 600;
+      color: $primary;
+      margin-right: 16px;
+      transform: translateY(16px);
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  &:not(.Home) {
+    .ant-layout-header {
+      .MainMenu {
+        @media (max-width: 991px) {
+          margin-top: 24px;
+        }
+      }
+
+      .user-container {
+        @media (max-width: 991px) {
+          top: -28px;
+          right: 32px;
+        }
+      }
+    }
+  }
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .section-title {
+    margin-bottom: 100px;
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $primary;
+    text-align: center;
+  }
+
+  .section-link {
+    color: $primary;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1;
+    transition: all .3s ease-in-out;
+    border-bottom: 2px solid $primary;
+
+    &:hover, &:focus {
+      text-decoration: none;
+      color: $secondary;
+      border-color: $secondary;
+    }
+  }
+}

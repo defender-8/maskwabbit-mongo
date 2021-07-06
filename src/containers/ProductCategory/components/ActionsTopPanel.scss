@@ -1,0 +1,19 @@
+@import "../../../assets/scss/fonts";
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+
+.ActionsTopPanel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  .ActionsTopPanel-search {
+
+  }
+
+  .ActionsTopPanel-sorter {
+    .ant-select-selector {
+      width: 200px;
+    }
+  }
+}

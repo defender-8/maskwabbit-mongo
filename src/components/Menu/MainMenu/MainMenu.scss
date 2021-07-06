@@ -1,0 +1,84 @@
+@import "../../../assets/scss/fonts";
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+
+.ant-menu.MainMenu {
+  &.ant-menu-horizontal {
+    background-color: transparent;
+    border-bottom: none;
+
+    @media (min-width: 1200px) {
+      right: 20%;
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+      right: 0;
+    }
+
+    @media (min-width: 992px) {
+      position: absolute;
+      top: 0;
+    }
+
+    @media (max-width: 991px) {
+      text-align: center;
+    }
+
+    .ant-menu-item {
+      display: inline-block;
+      padding: 0 16px;
+      color: $primary;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color .3s ease-in-out;
+
+      a {
+        color: $primary;
+      }
+
+      &:hover, &:focus {
+        a {
+          text-decoration: none;
+          color: $secondary;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 8px;
+      }
+
+      &.ant-menu-item-selected {
+        a {
+          color: $secondary;
+        }
+      }
+
+      @media (max-width: 767px) {
+        padding: 0 12px 16px;
+      }
+
+      @media (max-width: 575px) {
+        font-size: 12px;
+      }
+    }
+
+    .ant-menu-submenu {
+      .ant-menu-submenu-title {
+        position: relative;
+
+        span {
+          position: absolute;
+          top: -78px;
+          font-family: sans-serif;
+          font-weight: 600;
+
+          @media (min-width: 768px) and (max-width: 991px) {
+            top: -60px;
+          }
+        }
+      }
+    }
+  }
+}
+

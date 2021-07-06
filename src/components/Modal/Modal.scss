@@ -1,0 +1,67 @@
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.ant-modal {
+  .ant-modal-close-x {
+    .anticon {
+      color: $primary;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  div.ant-modal-content {
+    @media (min-width: 992px) {
+      border-radius: 20px;
+    }
+
+    @media (max-width: 991px) {
+      border-radius: 12px;
+    }
+
+    .ant-modal-header {
+      background: $bg-light url("../../assets/img/cart-modal-title-bg.svg") no-repeat left bottom;
+      border-bottom: none;
+      @media (min-width: 992px) {
+        border-radius: 20px 20px 0 0;
+        padding-bottom: 48px;
+      }
+      @media (max-width: 991px) {
+        border-radius: 12px;
+      }
+
+      .ant-modal-title {
+        @include fontCursive;
+        text-align: center;
+        @media (min-width: 992px) {
+          font-size: 36px;
+          line-height: 1.5;
+        }
+        @media (max-width: 991px) {
+          font-size: 32px;
+          line-height: 1.75;
+        }
+      }
+    }
+
+    .ant-modal-body {
+      background-color: $bg-light;
+      border-radius: 0 0 20px 20px;
+      @media (min-width: 992px) {
+        padding: 64px;
+      }
+      @media (max-width: 991px) {
+        border-radius: 12px;
+      }
+    }
+
+    .ant-modal-footer {
+      background-color: $bg-light;
+      border-top: none;
+    }
+  }
+}

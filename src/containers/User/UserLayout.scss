@@ -1,0 +1,13 @@
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.UserDataForm, .UserOrders {
+
+  .PageContent {
+
+    .container {
+      max-width: 1024px;
+    }
+  }
+}

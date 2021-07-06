@@ -1,0 +1,30 @@
+@import "../../../assets/scss/fonts";
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+
+@mixin input {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.ant-input {
+  @include input;
+}
+
+.ant-input-password {
+  @include input;
+}
+
+// with allowClear
+.ant-input-affix-wrapper {
+  @include input;
+}
+
+// ::placeholder
+::placeholder {
+  text-transform: uppercase;
+  color: $grey;
+}

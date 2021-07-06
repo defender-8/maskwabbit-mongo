@@ -1,0 +1,82 @@
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.CartModalBtn {
+  width: 20px;
+  display: inline-block;
+  cursor: pointer;
+  line-height: normal;
+  position: relative;
+
+  .CartModalBtn-count {
+    position: absolute;
+    top: -7px;
+    right: -11px;
+    background-color: $secondary;
+    min-width: 18px;
+    height: 18px;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: center;
+    border-radius: 50px;
+    color: $white;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+}
+
+.ant-modal.CartModal {
+  @media (min-width: 992px) {
+    width: 930px !important;
+  }
+
+  .ant-modal-content {
+    .ant-modal-header {
+      .ant-modal-title {
+        @media (min-width: 992px) {
+          font-size: 56px;
+          line-height: 1.75;
+        }
+      }
+    }
+
+    .CartModalFooter {
+      display: flex;
+      justify-content: center;
+      margin-top: 64px;
+
+      &.withCartItems {
+        justify-content: space-between;
+
+        .ant-btn-link {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.Cart {
+  .Cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $primary;
+    border-top: solid 2px lighten(#dbdbdb, 7%);
+    border-bottom: solid 1px #dbdbdb;
+
+    .Cart-total-name {
+      text-transform: uppercase;
+      font-size: 24px;
+      line-height: 1.67;
+    }
+
+    .Cart-total-sum {
+      @include fontCursive;
+      font-size: 56px;
+      line-height: 1.67;
+    }
+  }
+}

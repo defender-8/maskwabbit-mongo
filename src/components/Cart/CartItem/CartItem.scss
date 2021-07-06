@@ -1,0 +1,83 @@
+@import "../../../assets/scss/fonts";
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+
+.CartItem {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 64px;
+  }
+
+  .CartItem-img-wr {
+    width: 19.25%;
+    height: 160px;
+    margin-right: 6.75%;
+    border: solid 1px #dbdbdb;
+    border-radius: 20px;
+    position: relative;
+
+    .CartItem-img {
+      max-width: 80%;
+      max-height: 80%;
+      @include posCenter;
+    }
+  }
+
+  .CartItem-nq {
+    width: 50%;
+    padding-top: 12px;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 1.5;
+    color: $primary;
+
+    .CartItem-name {
+
+    }
+
+    .CartItem-quantity-wr {
+      margin-top: 16px;
+      display: flex;
+      width: 160px;
+      justify-content: space-between;
+      align-items: center;
+
+      .CartItem-quantity-action-wr {
+        border: solid 1px #dbdbdb;
+        border-radius: 4px;
+        width: 40px;
+        height: 40px;
+        position: relative;
+
+        .CartItem-quantity-action {
+          @include posCenterX;
+          top: -4px;
+          font-size: 30px;
+          font-weight: 300;
+          cursor: pointer;
+          user-select: none
+        }
+      }
+
+      .CartItem-quantity {
+
+      }
+
+      .CartItem-remove {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .CartItem-price {
+    width: 24%;
+    padding-top: 8px;
+    margin-left: auto;
+    text-align: right;
+    font-size: 56px;
+    font-family: LeviBrusf, sans-serif;
+    color: $primary;
+  }
+}

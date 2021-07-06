@@ -1,0 +1,68 @@
+@import "../../../assets/scss/fonts";
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+
+.PageHeader {
+  max-width: 1200px !important;
+  margin: 16px auto 32px;
+  @media (max-width: 991px) {
+    text-align: center;
+    margin-top: 64px;
+  }
+
+  .logo {
+    display: inline-block;
+    padding: 0 12px;
+  }
+
+  .PageHeader-title {
+    position: relative;
+    display: inline-block;
+    transform: translateY(32px);
+    padding: 0 12px;
+
+    h1 {
+      font-family: "LeviBrusf", "Balsamiq Sans", sans-serif;
+      color: $primary;
+      font-size: 74px;
+      line-height: 1;
+    }
+  }
+
+  &.with-subtitle {
+    .logo {
+      vertical-align: top;
+    }
+
+    .PageHeader-title {
+      width: calc(100% - 120px);
+      @media (min-width: 992px) {
+        padding-top: 32px;
+      }
+      @media (max-width: 991px) {
+        width: 100%;
+      }
+
+      h1 {
+        @media (min-width: 992px) {
+          margin-bottom: -16px;
+        }
+        @media (max-width: 991px) {
+          margin-bottom: 0;
+        }
+      }
+
+      .PageHeader-subtitle {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.PageContent {
+  position: relative;
+
+  .container {
+    max-width: 850px;
+  }
+}

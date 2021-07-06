@@ -1,0 +1,37 @@
+@import "../../../../assets/scss/fonts";
+@import "../../../../assets/scss/variables";
+@import "../../../../assets/scss/mixins";
+
+.OrderProdItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 16px;
+
+  .OrderProdItem-col-title {
+    font-size: 12px;
+    color: $grey-05;
+  }
+
+  .OrderProdItem-img {
+    flex: 0 0 60px;
+  }
+
+  .OrderProdItem-title {
+    font-weight: 600;
+    flex: 1 1 auto;
+  }
+
+  .OrderProdItem-price {
+    flex: 0 0 100px;
+  }
+
+  .OrderProdItem-quantity {
+    flex: 0 0 100px;
+  }
+
+  .OrderProdItem-sum {
+    flex: 0 0 100px;
+  }
+}

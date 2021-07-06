@@ -1,0 +1,32 @@
+@import "../../../assets/scss/fonts";
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+
+.SocialNav {
+  .SocialNav-item {
+    margin-bottom: 18px;
+  }
+
+  .SocialNav-item-link {
+    display: block;
+    color: $primary;
+    transition: color .3s ease-in-out;
+
+    &:hover, &:focus {
+      color: $secondary;
+      text-decoration: none;
+    }
+
+    .SocialNav-item-icon-wrapper {
+      display: inline-block;
+      width: 30px;
+      text-align: center;
+      margin-right: 8px;
+    }
+
+    .SocialNav-item-name {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "../../../assets/scss/fonts";
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+
+.FooterNav {
+  .FooterNav-item {
+    margin-bottom: 20px;
+  }
+
+  .FooterNav-link {
+    color: $primary;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color .3s ease-in-out;
+
+    &:hover, &:focus {
+      color: $secondary;
+      text-decoration: none;
+    }
+  }
+}

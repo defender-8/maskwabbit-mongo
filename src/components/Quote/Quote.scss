@@ -1,0 +1,28 @@
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.Quote {
+  color: $primary;
+
+  .Quote-text {
+    font-family: "SF Pro Rounded", "Balsamiq Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.4;
+    @media (max-width: 767px) {
+      font-size: 28px;
+    }
+
+  }
+
+  .Quote-author {
+    font-family: LeviBrusf;
+    font-size: 56px;
+    font-weight: normal;
+    line-height: 1;
+    @media (max-width: 767px) {
+      font-size: 48px;
+    }
+  }
+}

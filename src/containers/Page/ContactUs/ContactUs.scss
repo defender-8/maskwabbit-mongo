@@ -1,0 +1,19 @@
+@import "../../../assets/scss/fonts";
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+
+.ContactUs {
+  .PageHeader {
+    .logo {
+      max-width: 136px;
+    }
+  }
+
+  .PageContent {
+    margin-top: 96px;
+
+    .container {
+      max-width: 574px;
+    }
+  }
+}

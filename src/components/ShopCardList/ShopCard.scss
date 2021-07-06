@@ -1,0 +1,77 @@
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+@mixin cursiveText {
+  color: $primary;
+  font-family: LeviBrusf, sans-serif;
+  font-size: 48px;
+  line-height: 1;
+}
+
+@mixin topRight {
+  text-align: right;
+  position: absolute;
+  right: 12px;
+  top: 24px;
+}
+
+.ShopCard {
+  height: 464px;
+  margin-bottom: 80px;
+  background-color: $bg-light;
+  border: solid 1px #dbdbdb;
+  border-radius: 18px;
+  text-align: center;
+  padding: 64px 32px 36px;
+  position: relative;
+
+  .ShopCard-img {
+    max-width: 80%;
+    max-height: 100%;
+    display: inline-block;
+    @include posCenter;
+    @media (max-width: 991px) {
+      max-width: 65%;
+    }
+  }
+
+  .ShopCard-btn {
+    @include posCenterX;
+    bottom: -32px;
+    z-index: 10;
+    @media (max-width: 767px) {
+      padding: 15px 40px;
+      font-size: 20px;
+      bottom: -24px;
+    }
+  }
+
+  &.ShopCard-category {
+    .ShopCard-text {
+      @include cursiveText;
+      @include topRight;
+    }
+  }
+
+  &.ShopCard-product {
+    .ShopCard-price-wr {
+      @include topRight;
+
+      .ShopCard-price {
+        @include cursiveText;
+      }
+
+      .ShopCard-not-available {
+        margin-top: -8px;
+      }
+    }
+
+    .ShopCard-text {
+      color: $grey;
+      font-size: 16px;
+      @include posCenterX;
+      bottom: 48px;
+    }
+  }
+}
